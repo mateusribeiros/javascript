@@ -1,0 +1,9 @@
+var.push()			->Empurra um termo para o final da Array
+var.pop()			->Remove o último termo da Array
+var.shift()			->Empurra um termo para o início da Array
+var.unshift()			->Remove o primeiro termo da Array
+
+obj.propriedade = "text" 	-> Muda o valor da propriedade para o "text".
+obj["newPropriedade"] = "text"	->Acrescenta uma nova propriedade ao objeto, seguida do seu valor("text").
+delete obj.propriedade 		->Deleta uma propriedade do objeto
+.hasOwnProperty(propname)   	->Verificar se a propriedade existe no objeto

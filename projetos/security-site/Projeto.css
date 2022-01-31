@@ -1,0 +1,111 @@
+@import url(https://alphaconvites.com.br/wp-content/uploads/2020/12/festa-antes-formatura-scaled.jpg);
+
+:root {
+    --color-white-alpha: rgba(212, 212, 212, 0.8);
+}
+
+html {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    background-image: 
+ url(https://alphaconvites.com.br/wp-content/uploads/2020/12/festa-antes-formatura-scaled.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 1080px) {
+    html {
+        background-size: 150%;
+    }
+}
+
+@media (max-width: 590px) {
+    html {
+        background-size: 200%;
+    }
+}
+
+h1 {
+    font-size: 4em;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+h2 {
+    line-height: 1em;
+    font-size: 1.5em;
+    margin: 30px;
+}
+
+@media (max-width: 1080px) { 
+    h1 {
+        font-size: 4em;
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+
+    h2 {
+        line-height: 1em; 
+        font-size: 1.3em;
+        margin: 30px;
+    }
+}
+
+#PermissaoDeEntrada {
+    padding: 1%;
+    font-size: 20px;
+}
+
+#all {
+    background:  var(--color-white-alpha);
+    padding: 6px;
+    margin: 0% 30% 0% 30%;
+    border-radius: 0.3rem;
+}
+
+section {
+    padding: 0.5%;
+    margin: 1.5% 1%;
+    line-height: 0%;
+}
+
+@media (max-width: 1080px) {
+    .all {
+        padding: 1px;
+        margin: 0% 25%;  
+    }
+}
+
+.text {
+    border: 1px solid black;
+    border-radius: 2%;
+    height: 35px;
+    width: 85%;
+    text-align: center;
+    font-size: 1em;
+}
+
+#submit {
+    background-color: #fcfcfc;
+    margin-top: 10px;
+    width: 15em;
+    height: 2.5em;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit:hover {
+    background-color: #651366;
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+}
+
+@media (max-width: 1080px) {
+    #submit {
+        width: 12.5em;
+    }
+}

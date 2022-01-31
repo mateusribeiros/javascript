@@ -1,0 +1,5 @@
+Este projeto é focado na criação de um Site de convite para uma 
+FESTA VIP
+
+Se você foi convidado e quem te convidou tem permissão para tal, então
+a sua entrada é confirmada, caso contrário, a sua entrada é negada

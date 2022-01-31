@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+    <script src="./Projeto.js"></script>
+    <link rel="stylesheet" href="Projeto.css">
+</head>
+
+<body>
+    <section>
+        <h1>Festa VIP</h1>
+    </section>
+
+    <div id="all">
+        <section>
+                <h2>Bem vindo a festa, senhor(a):</h2>
+                <input class="text" id="nome" name="invited" type="text" placeholder="Digite seu nome" />
+
+                <h2>Quem te convidou para essa festa?</h2>
+                <input class="text" id="permitidos" name="invite" type="text" placeholder="Quem te convidou?" required />
+                <input id="submit" name="submit" onclick="VerificarEntrada()" type="submit" value="Verificar se posso entrar" />
+        </section>
+
+        <section>
+            <h2> Você está permitido a entrar?</h2>
+            <label for="" id="PermissaoDeEntrada">Pesquisando...</label>
+        </section>
+    </div>
+
+   </body>  
+</html>
