@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    body {
+        background-color: rgb(63, 46, 46);
+        color: white;
+        font: normal 13pt Arial;
+    }
+</style>
+<body>
+    <h1>Iniciando estudo com DOM</h1>
+    <p id = "p1">Aqui vai o resultado:</p>
+    <p class= "p2"> Outro parágrafo.</p>
+    <p class = 'p2'>Aprendendo a usar o <strong>DOM</strong> em Js.</p>
+    <p class = 'p3'>Parágrafo do selector</p>
+    <p class = 'p3'>Parágrafo do SelectorAll</p>
+    <div>Clique aqui</div>
+
+    <script>
+        const p1 = document.getElementById('p1')
+        p1.style.background = 'black' // Mudando fundo por id
+
+        const p2 = document.getElementsByClassName('p2')[1]
+        p2.innerText = 'Olá' // Mudando texto por class
+
+        const div = document.getElementsByTagName('div')[0]
+        div.style.color = 'black' // Mudando a cor das letras por tag
+
+        const p3 = document.querySelector('p.p3')
+        p3.style.background = 'grey' // Mudando fundo por querySelector
+
+        const p3_1 = document.querySelectorAll('p.p3')[1]
+        p3_1.style.background = 'red' // Mudando fundo por querySelectorAll
+    </script>
+</body>
+</html>
