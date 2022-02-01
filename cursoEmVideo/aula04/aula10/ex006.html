@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    #area {
+        font: normal 20pt Arial;
+        background-color: green;
+        color: whitesmoke;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" >
+        <code>Interaja...</code>
+    </div>
+
+    <script>
+        // n.addEventListener('evento', função) dá o mesmo resultado que ON dentro do HTML
+        function clicar() { // Função acionada quando a ação é executada
+            const clique = document.querySelectorAll('div#area')[0]
+            clique.innerText = 'Clicou!'
+            clique.style.background = 'red'
+        }
+
+        function entrar() {
+            const entrou = document.querySelectorAll('div#area')[0]
+            entrou.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            const saiu = document.querySelectorAll('div#area')[0]
+            saiu.innerText = 'Saiu!'
+            saiu.style.background = 'green'
+        }
+        
+    </script>
+</body>
+
+</html>
