@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test 1</title>
     <style>
         body {
             background-color: black;
-            color: rgb(32, 228, 48);
-            font: normal 25pt Arial;
+            color: grey;
+            font: normal 15pt Arial;
+        }
+
+        h1 {
+            color: red;
         }
     </style>
 </head>
 <body>
-    
-    <script>
-        let nome = prompt('Olá, como você se chama?')
-        document.write(`De acordo com os dados há ${nome.length} letras em seu nome.<br/>`)
-        document.write(`Nome em maiúsculo: ${nome.toUpperCase()}.<br/>`)
-        document.write(`Nome em minúsculo: ${nome.toLowerCase()}.`)
-    
+    <h1>Testando 1 2 3 ...</h1>
+    <p>Aqui haverão testes dos exercícios passados:</p>
 
+    <script>
+        let nome = prompt('Olá, poderia dizer o seu nome?')
+        let nascimento = Number(prompt('O ano que nasceu?'))
+        let anoAtual = Number.parseInt(prompt("O ano atual?"))
+        let salario = Number.parseFloat(prompt("E o seu salário?"))
+        let idade = anoAtual - nascimento // Subtração simples para saber idade
+
+        document.write(`Sua idade: ${idade}.<br/>`)
+        document.write(`Nome em MAIÚSCULA: ${nome.toUpperCase()}.<br/>`) // Tudo maiúscula
+        document.write(`Nome em minúscula: ${nome.toLowerCase()}.<br/>`) // Tudo minúscula
+        document.write(`Seu nome tem ${nome.length} letras.<br/>`) // length = comprimento
+        document.write(`Você recebe: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}.`) 
+            // toFixed = números dps da vírgula ; toLocaleString para utilizar a moeda local: BRL/ USD/ EUR/ YEN
     </script>
 </body>
 </html>
