@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 007</title>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        p {
+            font: normal 50pt Arial;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores feito por mim</h1>
+    <input type="number" name="num1" id="num1"> +
+    <input type="number" name="num2" id="num2">
+
+    <button name="somar" onclick="somar()">
+        SOMAR</button>
+    <p></p>
+
+    <script>
+        function somar() {
+            const num1 = Number(document.querySelector('input#num1').value)
+            const num2 = Number(document.querySelector('input#num2').value)
+            const soma = num1 + num2
+            return imprimir(soma)
+        }
+
+        function imprimir(soma) {
+            document.querySelector('p').style.border = "solid"
+            document.querySelector('p').innerText = soma
+        }
+    </script>
+</body>
+</html>
