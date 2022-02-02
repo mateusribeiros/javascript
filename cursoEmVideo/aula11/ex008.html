@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+            font: normal 13pt Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            font: normal 12pt Arial;
+        }
+
+        p {
+            text-align: center;
+            color: red;
+            font-size: 20pt;
+        }
+
+        #button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Qual a sua Nacionalidade?</h1>
+    <input type="text" placeholder="Digite aqui..." id="text">
+    <input type="button" value="Enviar" id="button" onclick="enviar()">
+    <p>Analisando...</p>
+
+    <script>
+        function enviar() {
+            const value = document.getElementById('text').value
+            const analise = document.querySelector('p')
+            analise.innerText = `Você é ${value.toLowerCase()}.`
+
+            if (value.toLowerCase() == "brasileiro") {
+                analise.innerText += 'Somos do mesmo país!'
+            } else {
+                analise.innerText += 'Não somos do mesmo país'
+            }
+        }
+    </script>
+</body>
+
+</html>
