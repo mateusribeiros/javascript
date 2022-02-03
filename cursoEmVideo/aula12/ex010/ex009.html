@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="./ex009.css">
+    <script src="./ex009.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div id="form">
+            <p> Ano de Nascimento:
+                <input type="number" id="ano" onkeypress="if(this.value.length==4) return false;" 
+                  min="1932" max="2015" required />
+            </p>
+            <p> Sexo:
+                <input type="radio" name="sexo" id="mas" />
+                <label for="mas">Masculino</label>
+
+                <input type="radio" name="sexo" id="fem" />
+                <label for="fem">Feminino</label>
+            </p>
+
+            <button type="submit" onclick="verificarAno()">
+                Verificar</button>
+        </div>
+        
+        <div id="res">
+            Preencha os dados acima para ver o resultado...
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; CursoEmVideo</p>
+    </footer>
+</body>
+
+</html>

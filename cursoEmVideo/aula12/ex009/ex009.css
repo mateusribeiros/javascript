@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(112, 101, 86);
-    color: black;
-    font: normal 15px Arial;
+    background-color: rgb(163, 148, 128);
+    color: rgb(0, 0, 0);
+    font: normal 13pt Arial;
 }
 
 header {
@@ -20,4 +20,14 @@ section {
 footer {
     text-align: center;
     font-style: italic;
+}
+
+div {
+    text-align: center;
+    padding: 5px;
+}
+
+#imagem {
+    width: 250px;
+    height: 250px;
 }
