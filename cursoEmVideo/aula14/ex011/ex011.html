@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="shortcut icon" href="icon/pencil.ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./ex011.css">
+    <script src="./ex011.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section id="box">
+        <div>
+            <p>Início:
+                <input type="number" id="inicio" min="0" max="1000"
+                onkeypress="if(this.value.length==4) return false;" 
+                placeholder="0-1000" />
+            </p>
+            <p>Fim:
+                <input type="number" id="final" min="1" max="1001"
+                 onkeypress="if(this.value.length==4) return false;" 
+                 placeholder="1-1001"/>
+            </p>
+            <p>Passo:
+                <input type="number" id="passo" min="1" max="1000"
+                onkeypress="if(this.value.length==4) return false;" />
+            </p>
+            <button type="submit" id="butt" onclick="contador()">
+                Contar</button>
+        </div>
+
+        <div id="test">
+            Contando:
+        </div>
+    </section>
+
+    <footer>
+        <p> &copy; CursoEmVideo</p>
+    </footer>
+</body>
+
+</html>

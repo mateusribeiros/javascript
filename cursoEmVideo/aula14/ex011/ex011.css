@@ -1,0 +1,40 @@
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    color: rgba(173, 64, 13, 0.966);
+    font: normal 13pt Arial;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10em;
+}
+
+#box {
+    background-color: rgb(88, 180, 149);
+    color: black;
+    padding: 3px;
+    margin: auto;
+    width: 20em; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(168, 168, 168, 0.767) 2px 2px 7px;
+}
+
+div {
+    line-height: 5px;
+    padding: 10px;
+}
+
+input {
+    text-align: center;
+    width: 10em;
+}
+
+#butt {
+    width: 5em;
+    cursor: pointer; /* Ponteiro do Mouser*/
+}

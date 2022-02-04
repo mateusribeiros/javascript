@@ -12,7 +12,6 @@ function verificarAno() {
        img.setAttribute('id','foto')
        let genero = ''
 
-
        if (sexf[0].checked) {
            genero = 'Homem'
            if (idade >= 0 && idade <= 10) {
@@ -36,7 +35,6 @@ function verificarAno() {
             img.setAttribute('src', 'img/idosa.png')    
            }
        }
-
        const res = document.querySelector('div#res')
        res.style.textAlign = 'center'
        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
