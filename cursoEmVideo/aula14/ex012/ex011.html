@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="./ex011.css">
     <script src="./ex011.js"></script>
+    <link rel="shortcut icon" href="icon/calculator.ico" type="image/x-icon" >
 </head>
 
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
 
     <section>
-        <div>
-            <p>Div1</p>
+        <div id="entrada">
+            <p>Número:
+                <input type="number" placeholder="Preencha aqui" id="tab"/>
+                <input type="submit" value="Gerar Tabuada" id="butt"
+                    onclick="gerarTabuada()"/>
+            </p> 
         </div>
-        
-        <div>
-            <p>Div2</p>
-        </div>
+
+        <div id="saida">Digite um número acima</div>
     </section>
 
     <footer>

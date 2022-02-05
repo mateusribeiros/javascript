@@ -1,33 +1,37 @@
 function contador() {
-    // Declarando e Armazenando variáveis
-    const start = Number(document.getElementById('inicio').value)
-    const end = Number(document.getElementById('final').value)
-    const mat = Number(document.getElementById('passo').value)
-    const result = document.getElementById('test')
+    // Armazenando Variáveis
+    const ini = document.getElementById('inicio').value
+    const fin = document.getElementById('final').value
+    const pro = document.getElementById('passo').value
+    const res = document.getElementById('result')
 
-    /* Verificando possíveis respostas fora da curva(Ainda há alguns
-        resultados fora da curva que passam despercebidos, porém
-        decidi deixar esses menos prováveis de serem usados) 
+    // Declarando Variáveis para receber os valores numéricos dos inputs
+    let inicio = Number(ini)
+    let final = Number(fin)
+    let passo = Number(pro)
+
+    /* IFs para detectar possíveis erros(Há outros, porém decidi
+        deixá-los de fora por enquanto)
     */
-    if (String(start).length == 0 || start < 0 || start > 1000)
-        alert('[ERROR] Confira os dados e tente novamente!');
-    if (end < 1 || end > 1001)
-        alert('[ERROR] Confira os dados e tente novamente!');
-    if (String(mat).length == 0 || mat === 0 || mat > 1001) {
-        alert('[ERROR] Confira os dados e tente novamente!');
+   // Detecta espaços não preenchidos
+    if(ini.length == 0 || fin.length == 0 || pro.length == 0) {
+        res.innerHTML = `Espaço em Branco! Tente Novamente!`
+    } // Detecta Passo = 0 e Valores altos(preferi reduzir)
+    else if (passo <= 0 || inicio > 1000 || final > 1000) {
+        res.innerHTML = `Passo = 0 ou Valores muito grandes!`
     }
-    
-    // Criando no HTML uma TAG que receberá os valores de I
-    const res = document.createElement('p')
-    res.setAttribute('id', 'result')
-    result.appendChild(res)
-    
+    else { 
+        res.innerHTML = `Contagem: <br>`
 
-    // FOR para fazer as partes de cálculos básicas
-    for (let i = start; i <= end; i += mat) {
-        res.innerHTML += i + "&#x2796;"
-        if (i + 1 > end)
-            res.innerHTML += "&#x1F308;";
+        if  (inicio < final) { // Crescente
+            for (let i = inicio; i <= final; i += passo) {
+                res.innerHTML += `${i} &#x269C; `
+            }
+        } else { // Decrescente
+            for (let i = inicio; i >= final; i -= passo) {
+                res.innerHTML += `${i} &#x269C; `
+            }
+        }
+        res.innerHTML += ` &#x1F33B;`
     }
-
 }

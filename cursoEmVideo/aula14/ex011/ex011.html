@@ -19,25 +19,23 @@
     <section id="box">
         <div>
             <p>Início:
-                <input type="number" id="inicio" min="0" max="1000"
-                onkeypress="if(this.value.length==4) return false;" 
-                placeholder="0-1000" />
+                <input type="number" id="inicio"
+                    onkeypress="if(this.value.length==4) return false;" />
             </p>
             <p>Fim:
-                <input type="number" id="final" min="1" max="1001"
-                 onkeypress="if(this.value.length==4) return false;" 
-                 placeholder="1-1001"/>
+                <input type="number" id="final"
+                    onkeypress="if(this.value.length==4) return false;" />
             </p>
             <p>Passo:
-                <input type="number" id="passo" min="1" max="1000"
-                onkeypress="if(this.value.length==4) return false;" />
+                <input type="number" id="passo" 
+                    onkeypress="if(this.value.length==4) return false;" />
             </p>
             <button type="submit" id="butt" onclick="contador()">
                 Contar</button>
         </div>
 
-        <div id="test">
-            Contando:
+        <div id="result">
+            Resultado...
         </div>
     </section>
 

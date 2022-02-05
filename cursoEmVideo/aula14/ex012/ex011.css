@@ -1,4 +1,40 @@
 body {
     background-color: black;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
+    font: normal 15pt Arial;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
+
+section {
+    background-color: rgb(20, 54, 105);
+    color: rgb(0, 0, 0);
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(197, 197, 197, 0.459) 2px 2px 15px;
+}
+
+#saida {
+    font-size: 15px;
+    background-color: aliceblue;
+    width: 150px;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    height: 150px;
+}
+
+#butt {
+    cursor: pointer;
 }

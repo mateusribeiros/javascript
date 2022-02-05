@@ -1,6 +1,6 @@
 body {
     background-color: rgba(0, 0, 0, 0.945);
-    color: rgba(173, 64, 13, 0.966);
+    color: rgb(214, 165, 5);
     font: normal 13pt Arial;
 }
 
@@ -14,19 +14,14 @@ footer {
 }
 
 #box {
-    background-color: rgb(88, 180, 149);
+    background-color: rgb(38, 134, 102);
     color: black;
-    padding: 3px;
+    padding: 15px;
     margin: auto;
     width: 20em; 
     height: auto;
     border-radius: 10px;
     box-shadow: rgba(168, 168, 168, 0.767) 2px 2px 7px;
-}
-
-div {
-    line-height: 5px;
-    padding: 10px;
 }
 
 input {
@@ -35,6 +30,7 @@ input {
 }
 
 #butt {
+    margin-bottom: 5px;
     width: 5em;
     cursor: pointer; /* Ponteiro do Mouser*/
 }
