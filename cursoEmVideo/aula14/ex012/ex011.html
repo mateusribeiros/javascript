@@ -19,7 +19,8 @@
     <section>
         <div id="entrada">
             <p>Número:
-                <input type="number" placeholder="Preencha aqui" id="tab"/>
+                <input type="number" placeholder="Digite aqui" id="tab"
+                onkeypress="if(this.value.length == 4) return false;"/>
                 <input type="submit" value="Gerar Tabuada" id="butt"
                     onclick="gerarTabuada()"/>
             </p> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <script src="./ex013.js"></script>
+    <link rel="stylesheet" href="./ex013.css">
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div id="entrada">
+            <p>Número (entre 1-100):
+                <input type="number" id="num" min="0" max="100" 
+                   onkeypress="if(this.value.length == 3) return false;"/>
+                <button id="btn" onclick="adicionar()">Adicionar</button>
+            </p>
+
+            <p id="mensagem"></p>
+            <button id="btn2" onclick="finalizar()">Finalizar</button>
+        </div>
+
+        <div id="saida"></div>
+    </section>
+
+    <footer>
+        <p> &copy; CursoEmVideo</p>
+    </footer>
+</body>
+
+</html>
