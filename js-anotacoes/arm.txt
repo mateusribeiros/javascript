@@ -1,0 +1,132 @@
+function Bird(color,feather) {
+    this.color = color,
+    this.feather = feather
+}
+
+Bird.prototype = { // Define para todos objs filhos de Bird sem repetição desnecessária
+    constructor: Bird,
+    numWings: 2,
+    eat() {
+        console.log('nhum nhum')
+    }
+}
+
+let duck = new Bird('yellow', true)
+/*
+duck = {
+    color: 'yellow',
+    feather: true,
+}
+
+duck.prototype = {
+    numWings: 2,
+    eat() {
+        console.log('nhum nhum') }
+}
+*/
+console.log(duck instanceof Bird) // duck foi criado a partir de Bird?
+console.log(duck.constructor === Bird) // mesma pergunta, sintaxe diferente
+// |-> Constructor deve ser declarado dentro do prototype para evitar erros
+
+
+let ownProps = [] // Propriedades Próprias
+let outProps = [] // Propriedades Fora
+
+for (let property in duck) {
+    if(duck.hasOwnProperty(property)) { 
+        ownProps.push(property)
+    } else {
+        outProps.push(property)
+    }
+}
+
+console.log(ownProps)
+console.log(outProps)
+
+console.log(Bird.prototype.isPrototypeOf(duck)) // o prototype de Duck vem de Bird
+console.log(Object.prototype.isPrototypeOf(Bird.prototype)) // O prototype do prototype de Bird
+/*
+Object.prototype = Supertype    // Cadeia por ordem de importância de baixo para cima
+Bird = Supertype
+duck = subtype
+*/
+
+function Animal() {}
+Animal.prototype = {
+    sleep() {
+        console.log('snif snif')}
+} // Para usar dentro de todos Constructors animais sem precisar repetir
+
+let animal = Object.create(Animal.prototype)
+// Define o prototype de animal como o prototype de Animal
+
+Bird.prototype = Object.create(Animal.prototype)
+/* O prototype do subtype: Bird, herdará as propriedades do supertype: Animal e
+agora todos os objs criados a partir de Bird possuirão no seu prototype
+*/
+let pavao = new Bird('colorful',true)
+console.log(`pavao instanceof Bird: ${pavao instanceof Bird}`)
+console.log(`pavao instanceof Animal: ${pavao instanceof Animal}`)
+/* Após add o prototype de Animal à Bird, o obj filho de Bird(pavao)
+é instanciado por ambos objs Pais
+*/
+console.log(`Bird constructor antes: ${Bird.prototype.constructor}`)
+Bird.prototype.constructor = Bird
+console.log(`Bird constructor depois: ${Bird.prototype.constructor}`)
+// Traduç: O constructor do Bird.prototype é Bird
+
+Bird.prototype.song = function(){ console.log('Piu Piu!')}
+// Define o método de Bird, além do de Animal add anteriormente
+
+Bird.prototype = {
+    sleep() { return 'Snof Snof!' }
+}
+// Substituir o método herdado por Animal
+
+function Airplane() {
+    this.feather = false
+}
+
+let flyMixin = function(obj) {
+    obj.fly = function() {}
+};
+
+flyMixin(Bird)
+flyMixin(Airplane) 
+/* Usa-se essa declaração de uma function dentro de outro para atribuir
+  a objs não relacionados que fazem uma mesma ação, como Pássaro e avião
+*/
+function Frog() {
+    let secret = 15;
+    this.ownSecret = function() { return secret }
+}
+
+let frog = new Frog()
+console.log(frog.ownSecret())
+// Técnica usada para manter privada uma informação de mudanças externas
+// Isso altera a variável de Global para dentro da Função construtora
+// Uma Função em JS sempre tem acesso ao contexto de criação
+
+(function () {
+    console.log("Chirp, chirp!");
+  })();
+//  Esse padrão é conhecido como expressão de função imediatamente invocada ou IIFE .
+// A função é executada e invocada imediatamente
+
+let motionModule = (function () {
+    return {
+      glideMixin: function(obj) {
+        obj.glide = function() {
+          console.log("Gliding on the water");
+        };
+      },
+      flyMixin: function(obj) {
+        obj.fly = function() {
+          console.log("Flying, wooosh!");
+        };
+      }
+    }
+  })(); 
+
+  motionModule.flyMixin(Airplane)
+// Podemos agrupar vários Mixins num único módulo utilizando IIFE
