@@ -244,3 +244,6 @@ console.log(testString.replace(regex27, ""));
 
 // -----------------------------------------------------------------
 //  
+function meat(str) {
+    return str.split(/\W/)
+} // retorna todos os NÃO termos da string
