@@ -247,3 +247,55 @@ console.log(testString.replace(regex27, ""));
 function meat(str) {
     return str.split(/\W/)
 } // retorna todos os NÃO termos da string
+
+
+// --------------------
+// Uso de join
+function meaty(stry) {
+    return stry
+            .split(' ')
+            .join('-');
+}
+
+
+/*    
+O every método funciona com arrays para verificar se cada elemento passa em um teste específico.
+Ele retorna um valor booleano - truese todos os valores atenderem aos critérios, falsecaso contrário.
+*/
+function positive(arr) {
+    return arr.every(curr => curr > 0)
+} 
+
+const arr = [0,6,7,9,15]
+positive(arr); // TRUE
+
+/*
+O some método funciona com arrays para verificar se algum elemento passa em um teste específico.
+Ele retorna um valor booleano - true se algum dos valores atender aos critérios, false caso contrário.
+*/
+function negative(arr) {
+    return arr.some(curr => curr < 0)
+}
+negative(arr); // FALSE
+
+/* CURRYING
+ele reestrutura uma função para que receba um argumento, 
+depois retorne outra função que receba o próximo argumento e assim por diante.
+*/
+
+function unCurried(x, y) {
+    return x + y;
+  }
+  
+  function curried(x) {
+    return function(y) {
+      return x + y;
+    }
+  }
+  
+  const curried = x => y => x + y
+  
+  curried(1)(2)
+
+  
+  
