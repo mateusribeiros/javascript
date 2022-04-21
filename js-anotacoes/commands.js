@@ -181,12 +181,12 @@ function howMany(...args) {
   export { add }; // P/ exportar ADD p/ outro arquivo
 
   // Outro arquivo
-  import { add } from './math.functions.js' // './' instrui a procurar o arquivo na mesma pasta do arquivo atual.
+  import { add } from './math.functions.js.js.js' // './' instrui a procurar o arquivo na mesma pasta do arquivo atual.
 
 
   // ----------------------------------------------------------------------------------------------------------------------------------
   //  Use * para importar tudo de um arquivo
-  import * as myMathModule from "./math_functions.js"; 
+  import * as myMathModule from "./math_functions.js.js.js"; 
   // A import instrução acima criará um objeto chamado 'myMathModule'
   // Este é apenas um nome de variável, você pode nomeá-lo de qualquer maneira
   myMathModule.add(2,3);
@@ -206,7 +206,7 @@ function howMany(...args) {
   //  você só pode ter um valor como exportação padrão em cada módulo ou arquivo
 
   // Outro arquivo
-  import add from "./math.functions.js"; // add é uma variável aqui
+  import add from "./math.functions.js.js.js"; // add é uma variável aqui
 
 
   // ----------------------------------------------------------------------------------------------------------------------------------------------
