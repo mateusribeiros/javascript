@@ -7,13 +7,13 @@ function verificarAno() {
        alert('[ERROR] Confira os dados e tente novamente!')
    } else {
        const idade = ano - Number(fano.value)   
-       const sexf = document.getElementsByName('sexo')
+       const sexo = document.getElementsByName('sexo')
        let img = document.createElement('img')
        img.setAttribute('id','foto')
        let genero = ''
 
 
-       if (sexf[0].checked) {
+       if (sexo[0].checked) {
            genero = 'Homem'
            if (idade >= 0 && idade <= 10) {
                img.setAttribute('src', 'img/menino.png')
@@ -24,7 +24,7 @@ function verificarAno() {
            } else {
                img.setAttribute('src', 'img/idoso.png')    
            }
-       } else if (sexf[1].checked){
+       } else if (sexo[1].checked){
            genero = 'Mulher'
            if (idade >= 0 && idade <= 10) {
             img.setAttribute('src', 'img/menina.png')    
