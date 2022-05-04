@@ -1,4 +1,4 @@
-// Create a local server and print out 'Irasshaimase, Arigato, Sayonara!'
+// Creando um server local e imprimindo: 'Irasshaimase, Arigato, Sayonara!'
 
 var http = require('http')
 
@@ -12,5 +12,5 @@ http.createServer(function(req, res) {
 
 console.log(`Open Server!`)
 
-// Ctrl + C = Close Server
-// localhost: door
+// Ctrl + C = Fechar server
+// localhost: porta

@@ -1,4 +1,4 @@
-// Using the Express framework and routes
+// Usando o framework Express/rotas
 
 const express = require('express')
 const app = express()

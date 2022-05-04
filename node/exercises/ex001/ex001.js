@@ -1,2 +1,2 @@
-// Print out 'Hello World!'
+// Saída: 'Hello World!'
 console.log('Hello World!')

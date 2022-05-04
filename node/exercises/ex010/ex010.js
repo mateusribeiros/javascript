@@ -1,8 +1,8 @@
-// How to connect to MySQL with sequelize
+// Como conectar o MySql com sequelize 
 
 /*
-    1*: database name, 2*: your username, 3*: password, 
-    {4*:server with your database, 5*: type database}
+    1*: nome banco de dados, 2*: seu usuário, 3*: senha, 
+    {4*:server com seu banco de dados, 5*: tipo do banco de dados}
 */
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('sistemadecadastro', 'root', 'mycolor', {
@@ -10,10 +10,10 @@ const sequelize = new Sequelize('sistemadecadastro', 'root', 'mycolor', {
     dialect: 'mysql'
 })
 
-// Testing database connection
+// Testando conexão com banco de dados
 /* 
-    .then() = sucessfull
-    .catch() = error
+    .then() = sucesso
+    .catch() = erro
 */
 sequelize.authenticate().then(function() {
     console.log(`Database initialization successful!`)

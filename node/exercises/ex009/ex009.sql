@@ -1,55 +1,55 @@
                         -- TESTING COMMANDS SQL
 
--- Into Mysql at the prompt
+-- Entrando Mysql através do prompt
 mysql -h localhost -u root -p 
 
--- Show all databases
+-- Mostrando todos bancos de dados
 SHOW DATABASES;
 
--- Create new databases
-CREATE DATABASE (nameDB); -- nameDB = Name your new database
+-- Criando novos bancos de dados
+CREATE DATABASE (nameDB); -- nameDB = nome do seu novo banco de dados
 
--- Log in database
+-- Entrando no banco de dados
 USE (nameDB);
 
---  Creating tables
- CREATE TABLE users( -- created table name
-    username VARCHAR(40), -- column name / type / max caracters
+--  Criando tabelas
+ CREATE TABLE users( -- nome da tabela criada
+    username VARCHAR(40), -- nome da coluna / tipo / max caracteres
     email VARCHAR(80),
     age INT(5)
 );
 
--- Show all tables in specific database
+-- Mostrando todas tabelas em um banco de dados específico
 SHOW TABLES;
 
--- Shows all columns in a table of your specific database
+-- Mostrar todas colunas em uma tabela no seu banco de dados específico
 DESCRIBE (nameTable);
 
--- Insert records into the table
+-- Inserir registros dentro da tabela
 INSERT INTO users(username, email, age) VALUES(
     'Marian',
     'marian@gmail.com',
     14
 );
 
--- Shows all datas within the specified table
+-- Mostrar todos dados numa tabela específica
 SELECT * FROM passwords;
 
--- Shows the data that meets the condition within the specified table
+-- Mostrar os dados que cumpram uma condição específica
 SELECT * FROM passwords WHERE condition;
 
--- Delete all content inside the table (BE CAREFUL)
+-- Delete todos os dados dentro da tabela (CUIDADO!)
 DELETE FROM nameTable;
 
--- Delete a specific record
-DELETE FROM nameTable WHERE username = 'Marian'; -- exemple
+-- Delete os dados que cumprar a condição específica
+DELETE FROM nameTable WHERE username = 'Marian'; -- exemplo
 
--- (BE CAREFUL WITH THIS) Because change all emails for this new email
+-- (CUIDADO!) Muda todos os registros para possuírem este mesmo email
 UPDATE users SET email = 'teste@hotmail.com';
 
--- Change one record for another
+-- Muda um registro por outro especificado em SET
 UPDATE users SET email = 'teste@hotmail.com' WHERE email = 'marian@gmail.com'
 
--- Permanently remove a table and all its contents from the server
--- (BE CAREFUL)
+-- Remove permanentemente toda a tabela e conteúdo incluso nela
+-- (CUIDADO!)
 DROP TABLE nameTable;

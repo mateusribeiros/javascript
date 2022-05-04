@@ -1,4 +1,4 @@
-// How to create a model(create tables in node) in sequelize
+// Como cria um model(cria tabelas com código) no sequelize
 
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('leagueoflegends','root','mycolor',{
@@ -7,7 +7,7 @@ const sequelize = new Sequelize('leagueoflegends','root','mycolor',{
 })
 
 
-// Model to post
+// Model para postar
 const Post = sequelize.define('posts', {
     title: {
         type: Sequelize.STRING
@@ -19,7 +19,7 @@ const Post = sequelize.define('posts', {
 
 
 
-// Model to create table for users
+// Model para criar tabela de usuários
 const User = sequelize.define('users', {
     firstName: {
         type: Sequelize.STRING
@@ -35,7 +35,7 @@ const User = sequelize.define('users', {
         }
 })
 
-// Data insert
+// Inserindo dados
 Post.create({
 title: `Latin`,
 content: `Fugiat et magna veniam non ad proident eiusmod 

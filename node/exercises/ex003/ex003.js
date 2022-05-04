@@ -1,4 +1,4 @@
-// Add two numbers
+// Adicionar dois números
 var number0 = 15
 var number1 = 25
 

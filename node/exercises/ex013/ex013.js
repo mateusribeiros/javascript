@@ -1,4 +1,4 @@
-// With Javascript/node/express/mysql/sequelize/handlebars/Body parser
+// Com Javascript/node/express/mysql/sequelize/handlebars/Body parser
 
 const express = require('express') // Express
 const app = express()
@@ -15,13 +15,13 @@ const bodyParser = require('body-parser') // Body Parses
     // Body Parser
         app.use(bodyParser.urlencoded({extended: false}))
         app.use(bodyParser.json())
-    // Connecting with Mysql database
+    // Conectando com Mysql database
         const sequelize = new Sequelize('form', 'root', 'mycolor', {
             host: 'localhost',
             dialect: 'mysql'
         })
 
-// Routs 
+// Rotas
     app.get('/', function (req, res) {
         res.render('form')
     })

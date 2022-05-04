@@ -1,4 +1,4 @@
-// Using HTML files
+// Usando arquivos HTML
 
 const express = require('express')
 const app = express()

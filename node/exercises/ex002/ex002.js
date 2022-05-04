@@ -1,4 +1,4 @@
-// Print out Name + lastName
+// Saída: Nome + Sobrenome
 var name = 'Mateus'
 var lastName = 'Eduardo'
 

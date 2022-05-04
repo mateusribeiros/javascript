@@ -1,4 +1,4 @@
-// LEARNING TO STORE DATA
+// Aprendendo armazenar dados
 
 const express = require('express')
 const app = express()
@@ -22,7 +22,7 @@ const Post = require('./models/Post')
 // ROUTS
 
 app.get('/', function(req,res){
-    Post.findAll({order: [['id','DESC']]}).then(function(allPosts){ // DESC = descending & ASC = growing
+    Post.findAll({order: [['id','DESC']]}).then(function(allPosts){ // DESC = decrescente & ASC = crescente
         res.render('principal', {posts: allPosts})
     })
 })
