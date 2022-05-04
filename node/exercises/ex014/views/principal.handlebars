@@ -1,0 +1,17 @@
+<h1>HELLO, MY FRIEND!</h1>
+<h2>WELCOME TO WEBPOSTS!</h2>
+
+<p>Make your post by clicking <a href="http://localhost:8087/form">HERE</a>!</p>
+
+<img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=860&q=80"
+    alt="cute cat sleeping">
+
+<footer>
+    <h3>POSTS:</h3>
+    {{#each posts}}
+    <p><strong>{{dataValues.title}}</strong></p>
+    <p>{{dataValues.content}}</p>
+    <p>{{dataValues.createdAt}}</p>
+    <hr>
+    {{/each}}
+</footer>
