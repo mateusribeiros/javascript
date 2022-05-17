@@ -1,0 +1,55 @@
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Qual você prefere?</h1>
+        </header>
+
+        <form action="/second" method="post">
+            <div class="form-group">
+                <label for="color">
+                    <p>Qual cor melhor combina com você?</p>
+                    <input type="radio" name="colors" id="color" value="black"> Black
+                    <input type="radio" name="colors" id="color" value="blue"> Blue
+                    <input type="radio" name="colors" id="color" value="red"> Red
+                    <input type="radio" name="colors" id="color" value="pink"> Pink
+                    <input type="radio" name="colors" id="color" value="white"> White
+                    <input type="radio" name="colors" id="color" value="yellow"> Yellow
+                    <input type="radio" name="colors" id="color" value="orange"> Orange
+                    <input type="radio" name="colors" id="color" value="green"> Green
+                </label>
+            </div>
+            <div>
+                <p>First Name:</p>
+                <input type="text" name="firstName" placeholder="">
+                <p>Last Name:</p>
+                <input type="text" name="lastName" placeholder="">
+                <p>Age:</p>
+                <input type="number" name="age" placeholder="">
+                <p>Email:</p>
+                <input type="text" name="email">
+                <button type="submit">ENVIAR</button>
+            </div>
+        </form>
+
+        <footer>
+            <p><strong>Usuários recém cadastrados:</strong></p>
+            {{#each users}}
+            <hr>
+            <p>{{dataValues.firstName}} {{dataValues.lastName}}</p>
+            <p>{{dataValues.createdAt}}</p>
+            <a href="/deletar/{{dataValues.id}}"><button>DELETAR</button></a>
+            <hr>
+            {{/each}}
+
+            <P>@mateuxe</P>
+        </footer>
+    </main>
+</body>
